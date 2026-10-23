@@ -18,8 +18,6 @@ services:
     env_file:
       - .env
     command: redis-server --requirepass ${REDIS_PASSWORD} --maxmemory 64mb --maxmemory-policy allkeys-lru --save "" --appendonly no
-    # Nội bộ hoàn toàn (không publish port): LSCache trong container wordpress kết nối thẳng redis:6379.
-    # Ephemeral đúng bản chất object cache: restart là cache trắng.
 
   wordpress:
     build: .
@@ -29,8 +27,6 @@ services:
         condition: service_started
       redis:
         condition: service_started
-    # Nguồn sự thật duy nhất cho config WP. OLS không truyền env xuống LSPHP nên
-    # ols-entrypoint.sh materialize các var này thành file putenv mỗi lúc start.
     env_file:
       - .env
     environment:
@@ -46,7 +42,7 @@ services:
         define('FS_METHOD','direct');
     volumes:
       - ./wordpress:/var/www/vhosts/localhost/html
-      - ./uploads.ini:/usr/local/lsws/lsphp84/etc/php/8.4/litespeed/conf.d/99-wordpress.ini:ro
+      - ./uploads.ini:/usr/local/lsws/lsphp85/etc/php/8.5/litespeed/conf.d/99-wordpress.ini:ro
 
   caddy:
     image: caddy:latest

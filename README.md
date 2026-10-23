@@ -29,7 +29,7 @@ Website thông tin của Khoa, phục vụ đăng tin tức, thông báo, tuyể
 
 - WordPress
 - Docker + Docker Compose
-- OpenLiteSpeed + PHP 8.4
+- OpenLiteSpeed + PHP 8.5
 - Caddy (reverse proxy, HTTPS tự động)
 - MariaDB + Redis (object cache)
 
