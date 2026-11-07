@@ -11,6 +11,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![MariaDB](https://img.shields.io/badge/MariaDB-latest-003545?logo=mariadb&logoColor=white)](https://mariadb.org/)
 [![Redis](https://img.shields.io/badge/Redis-latest-DC382D?logo=redis&logoColor=white)](https://redis.io/)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
 
 **English** · [Tiếng Việt](README.vi.md)
 
@@ -84,6 +85,7 @@ Only **Caddy** publishes ports to the host. The database and Redis are reachable
 ├── ols-entrypoint.sh     # Fix permissions, generate env file for PHP, then run the original entrypoint
 ├── uploads.ini           # Upload limits, memory, opcache
 ├── .env.example          # Environment template (copy to .env)
+├── LICENSE               # GNU General Public License v3.0
 ├── wordpress/            # WordPress source (bind mount); only wp-config.php is committed
 │   └── wp-config.php     # Reads configuration from environment variables
 ├── screenshots/          # Demo screenshots
@@ -322,4 +324,8 @@ View all logs: `docker compose logs --tail=200`
 
 ## License
 
-© 2026 Faculty of KT — CNTT — VHNT. For educational purposes.
+This project is licensed under the [GNU General Public License v3.0](LICENSE) (GPL-3.0).
+
+Copyright © 2026 Faculty of KT — CNTT — VHNT.
+
+WordPress, OpenLiteSpeed, Caddy, MariaDB, Redis, and other third-party components remain under their own upstream licenses.

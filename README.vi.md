@@ -11,6 +11,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 [![MariaDB](https://img.shields.io/badge/MariaDB-latest-003545?logo=mariadb&logoColor=white)](https://mariadb.org/)
 [![Redis](https://img.shields.io/badge/Redis-latest-DC382D?logo=redis&logoColor=white)](https://redis.io/)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
 
 [English](README.md) · **Tiếng Việt**
 
@@ -84,6 +85,7 @@ Chỉ **Caddy** được publish cổng ra ngoài. DB và Redis chỉ truy cập
 ├── ols-entrypoint.sh     # Fix quyền + sinh file env cho PHP, rồi gọi entrypoint gốc
 ├── uploads.ini           # Giới hạn upload, memory, opcache
 ├── .env.example          # Mẫu biến môi trường (copy thành .env)
+├── LICENSE               # GNU General Public License v3.0
 ├── wordpress/            # Source WordPress (bind mount), chỉ commit wp-config.php
 │   └── wp-config.php     # Đọc cấu hình từ biến môi trường
 ├── screenshots/          # Ảnh demo
@@ -322,4 +324,8 @@ Xem toàn bộ log: `docker compose logs --tail=200`
 
 ## Giấy phép
 
-© 2026 Khoa KT — CNTT — VHNT. Dùng cho mục đích đào tạo.
+Dự án được cấp phép theo [GNU General Public License v3.0](LICENSE) (GPL-3.0).
+
+Bản quyền © 2026 Khoa KT — CNTT — VHNT.
+
+WordPress, OpenLiteSpeed, Caddy, MariaDB, Redis và các thành phần bên thứ ba khác vẫn tuân theo giấy phép upstream riêng.
